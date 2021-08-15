@@ -1,13 +1,37 @@
 # better-sqlite3 [![build status](https://github.com/brownman/better-sqlite3/actions/workflows/build.yml/badge.svg)](https://github.com/brownman/better-sqlite3/actions/workflows/build.yml)
 
+```sh
+    docker run -it --rm --name verdaccio -p 4873:4873 verdaccio/verdaccio
+    npm adduser --registry http://localhost:4873/
+    npm login
+    npm publish --registry http://localhost:4873/
+
+    details:
+
+    npm adduser --registry http://localhost:4873/
+        npm notice Log in on http://localhost:4873/
+        Username: ofer
+        Password:
+        Email: (this IS public) ofer@ofer.of
+    Logged in as ofer on http://localhost:4873/.
+
+    npm login
+            npm notice Log in on http://0.0.0.0:4873/
+            Username: ofer
+            Password:
+            Email: (this IS public) ofer@ofer.sh
+    Logged in as ofer on http://0.0.0.0:4873/.
+
+```
+
 The fastest and simplest library for SQLite3 in Node.js.
 
 - Full transaction support
 - High performance, efficiency, and safety
-- Easy-to-use synchronous API *(better concurrency than an asynchronous API... yes, you read that correctly)*
+- Easy-to-use synchronous API _(better concurrency than an asynchronous API... yes, you read that correctly)_
 - Support for user-defined functions, aggregates, virtual tables, and extensions
-- 64-bit integers *(invisible until you need them)*
-- Worker thread support *(for large/slow queries)*
+- 64-bit integers _(invisible until you need them)_
+- Worker thread support _(for large/slow queries)_
 
 ## Help this project stay strong! &#128170;
 
@@ -19,10 +43,10 @@ The fastest and simplest library for SQLite3 in Node.js.
 
 ## How other libraries compare
 
-|   |select 1 row &nbsp;`get()`&nbsp;|select 100 rows &nbsp;&nbsp;`all()`&nbsp;&nbsp;|select 100 rows `iterate()` 1-by-1|insert 1 row `run()`|insert 100 rows in a transaction|
-|---|---|---|---|---|---|
-|better-sqlite3|1x|1x|1x|1x|1x|
-|[sqlite](https://www.npmjs.com/package/sqlite) and [sqlite3](https://www.npmjs.com/package/sqlite3)|11.7x slower|2.9x slower|24.4x slower|2.8x slower|15.6x slower|
+|                                                                                                     | select 1 row &nbsp;`get()`&nbsp; | select 100 rows &nbsp;&nbsp;`all()`&nbsp;&nbsp; | select 100 rows `iterate()` 1-by-1 | insert 1 row `run()` | insert 100 rows in a transaction |
+| --------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- | ---------------------------------- | -------------------- | -------------------------------- |
+| better-sqlite3                                                                                      | 1x                               | 1x                                              | 1x                                 | 1x                   | 1x                               |
+| [sqlite](https://www.npmjs.com/package/sqlite) and [sqlite3](https://www.npmjs.com/package/sqlite3) | 11.7x slower                     | 2.9x slower                                     | 24.4x slower                       | 2.8x slower          | 15.6x slower                     |
 
 > You can verify these results by [running the benchmark yourself](./docs/benchmark.md).
 
@@ -39,9 +63,9 @@ npm install better-sqlite3
 ## Usage
 
 ```js
-const db = require('better-sqlite3')('foobar.db', options);
+const db = require("better-sqlite3")("foobar.db", options);
 
-const row = db.prepare('SELECT * FROM users WHERE id = ?').get(userId);
+const row = db.prepare("SELECT * FROM users WHERE id = ?").get(userId);
 console.log(row.firstName, row.lastName, row.email);
 ```
 
@@ -54,7 +78,7 @@ console.log(row.firstName, row.lastName, row.email);
 
 #### When is this library not appropriate?
 
-In most cases, if you're attempting something that cannot be reasonably accomplished with `better-sqlite3`, it probably cannot be reasonably accomplished with SQLite3 in general. For example, if you're executing queries that take one second to complete, and you expect to have many concurrent users executing those queries, no amount of asynchronicity will save you from SQLite3's serialized nature. Fortunately, SQLite3 is very *very* fast. With proper indexing, we've been able to achieve upward of 2000 queries per second with 5-way-joins in a 60 GB database, where each query was handling 5–50 kilobytes of real data.
+In most cases, if you're attempting something that cannot be reasonably accomplished with `better-sqlite3`, it probably cannot be reasonably accomplished with SQLite3 in general. For example, if you're executing queries that take one second to complete, and you expect to have many concurrent users executing those queries, no amount of asynchronicity will save you from SQLite3's serialized nature. Fortunately, SQLite3 is very _very_ fast. With proper indexing, we've been able to achieve upward of 2000 queries per second with 5-way-joins in a 60 GB database, where each query was handling 5–50 kilobytes of real data.
 
 If you have a performance problem, the most likely causes are inefficient queries, improper indexing, or a lack of [WAL mode](./docs/performance.md)—not `better-sqlite3` itself. However, there are some cases where `better-sqlite3` could be inappropriate:
 
