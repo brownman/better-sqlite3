@@ -42,5 +42,9 @@ describe('Database#exec()', function () {
 		expect(rows[0].b).to.equal(44);
 		expect(rows[1].a).to.equal('baz');
 		expect(rows[1].b).to.equal(null);
+		
+		const rows_dbstat = this.db.prepare('SELECT * FROM "dbstat"').all();
+		expect(rows_dbstat[0].name).to.equal("sqlite_schema");
+		expect(rows_dbstat[1].name).to.equal("entries");
 	});
 });
