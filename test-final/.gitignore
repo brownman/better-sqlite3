@@ -1,0 +1,4 @@
+*.sqlite
+package-lock.json
+*.tgz
+node_modules
