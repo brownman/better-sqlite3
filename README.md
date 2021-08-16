@@ -3,8 +3,7 @@
 ## Use
 
 Q: how to use better-sqlite3 version v7.4.3 with dbstat enabled in your project:
-
-1. Browse to `STEPS/demo` and follow the instructions
+[Demo](./STEPS/demo)
 
 ## Create
 
@@ -12,4 +11,4 @@ Q: how to create a packed version with the latest better-sqlite3 version which h
 
 1. fork the latest better-sqlite3 package and update the source-code to include the SQLITE_ENABLE_DBSTAT_VTAB flag (as done in this repo)
 
-2. Browse to `STEPS/prepare_packed_package` and follow the instructions
+2. [prepare a packed package](./STEPS/prepare_packed_package)
