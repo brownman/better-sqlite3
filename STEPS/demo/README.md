@@ -1,7 +1,8 @@
 # DEMO
 
 - how to use the node module `better-sqlite3` with `dbstat` enabled ?
-- this DEMO makes use of `better-sqlite3 version:7.4.3` with `dbstat` enabled by consuming this package from a pre-made archive file.
+- this DEMO makes use of `better-sqlite3 version:7.4.3` with `dbstat` enabled by consuming this package from the pre-made archive file `better-sqlite3-7.4.3-alpha.tgz
+` .
 
 ## question:
 
