@@ -23,7 +23,7 @@ how-to get the archived form of the package which is also installable using npm 
 ```
 
 2. fetch a packed version of the source-code
-- run fetch.sh
+- run `fetch.sh`
 
 3. install the packed version and run it to check if dbstat is enabled
 - run `time npm i`
