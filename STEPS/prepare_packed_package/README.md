@@ -24,3 +24,5 @@ how-to get the archived form of the package which is also installable using npm 
 3. install the packed version and run it to check if dbstat is enabled
 - run `time npm i`
 - run `npm start`
+
+4. the product of this lesson is a .tgz archive file which we can use elsewhere. 
