@@ -5,10 +5,10 @@ var runSafe = function (table, alter) {
   try {
     output = db.prepare(alter).run();
     // console.log(output);
-    console.log("dbstat ENABLED");
+    console.log("dbstat is ENABLED");
   } catch (e) {
     console.error(e);
-    console.log("dbstat NOT ENABLED");
+    console.log("dbstat is DISABLED");
   }
 };
 
