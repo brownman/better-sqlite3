@@ -7,7 +7,8 @@
 ## question:
 
 - Q: Does our project has better-sqlite3 package with dbstat enabled?
-- A: In this demo the answer is yes
+- A: In this demo the answer is yes. you can copy `index.js` to your project's root directory and run it there for indication.
+
 
 ## install
 
@@ -20,7 +21,6 @@
 ## analyze the results:
 
 - running `index.js` indicates if the dbstat table is enabled.
-- you may copy this file to your project's root directory and run it there for indication.
 
 ## customize:
 
