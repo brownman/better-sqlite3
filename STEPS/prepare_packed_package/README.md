@@ -1,5 +1,6 @@
 how-to get the archived form of the package which is also installable using npm  ?
 -------
+0. cd to the better-sqlite3 folder and update package.json with a version which is not listed [here](https://www.npmjs.com/package/better-sqlite3?activeTab=versions)
 1. create a private npm registry and upload the package's source code 
 ```sh
 
