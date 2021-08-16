@@ -1,13 +1,15 @@
 # better-sqlite3 [![build status](https://github.com/brownman/better-sqlite3/actions/workflows/build.yml/badge.svg)](https://github.com/brownman/better-sqlite3/actions/workflows/build.yml)
 
+## Use
 
-Q: how to create a packed version of better-sqlite3 which has dbstat enabled ?
+Q: how to use better-sqlite3 version v7.4.3 with dbstat enabled in your project:
 
+1. Browse to `STEPS/demo` and follow the instructions
 
-1. fork better-sqlite3 from its original source and add the SQLITE_ENABLE_DBSTAT_VTAB flag (where it exist on this repo)
+## Create
 
-2. publish to local npm registry
+Q: how to create a packed version with the latest better-sqlite3 version which has dbstat enabled ?
 
-3. fetch packed version of the package from the local npm registery
+1. fork the latest better-sqlite3 package and update the source-code to include the SQLITE_ENABLE_DBSTAT_VTAB flag (as done in this repo)
 
-4. use the packed package in your project
+2. Browse to `STEPS/prepare_packed_package` and follow the instructions
