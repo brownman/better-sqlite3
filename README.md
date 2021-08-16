@@ -3,7 +3,7 @@
 ## Use
 
 Q: how to use better-sqlite3 version v7.4.3 with dbstat enabled in your project:
-[Demo](./STEPS/demo)
+1. follow this [Demo](./STEPS/demo) instructions
 
 ## Create
 
