@@ -1,24 +1,12 @@
 # better-sqlite3 [![build status](https://github.com/brownman/better-sqlite3/actions/workflows/build.yml/badge.svg)](https://github.com/brownman/better-sqlite3/actions/workflows/build.yml)
 
-## publish to local npm registry:
 
-```sh
+## how to create a packed version of better-sqlite3 which has dbstat enabled ?
 
-    docker run -it --rm --name verdaccio -p 4873:4873 verdaccio/verdaccio
+## 1. fork better-sqlite3 from its original source and add the SQLITE_ENABLE_DBSTAT_VTAB flag (where it exist on this repo)
 
-    npm adduser --registry http://localhost:4873/
-        Username: user
-        Password: user
-        Email: user@user.of
+## 2. publish to local npm registry
 
-    npm login
-        Username: user
-        Password: user
-        Email: user@user.of
+## 3. fetch packed version of the package from the local npm registery
 
-    npm publish --registry http://localhost:4873/
-
-
-    cd test-final
-    cat README.md #and follow the steps described on file
-```
+## 4. use the packed package in your project
