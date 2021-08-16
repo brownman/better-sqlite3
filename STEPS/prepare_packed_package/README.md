@@ -1,6 +1,6 @@
 how-to get the archived form of the package which is also installable using npm  ?
 -------
-1. create a private npm registery and upload the package's source code 
+1. create a private npm registry and upload the package's source code 
 ```sh
 
     docker run -it --rm --name verdaccio -p 4873:4873 verdaccio/verdaccio
