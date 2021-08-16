@@ -4,7 +4,7 @@ const db = new Database("analytics1.sqlite");
 var runSafe = function (table, alter) {
   try {
     output = db.prepare(alter).run();
-    console.log(output);
+    // console.log(output);
     console.log("dbstat ENABLED");
   } catch (e) {
     console.error(e);
