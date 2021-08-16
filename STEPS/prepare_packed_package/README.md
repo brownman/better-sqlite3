@@ -16,13 +16,9 @@ how-to get the archived form of the package which is also installable using npm 
         Email: user@user.of
 
     npm publish --registry http://localhost:4873/
-
-
-    cd test-final
-    cat README.md #and follow the steps described on file
 ```
 
-2. fetch a packed version of the source-code
+2. fetch a packed version of the package's source-code
 - run `fetch.sh`
 
 3. install the packed version and run it to check if dbstat is enabled
